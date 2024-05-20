@@ -1,0 +1,36 @@
+rabbitmq system commands
+--------------------------
+
+rabbitmqctl status - Checking Server Status
+rabbitmqctl list_connections - list all active connections to the RabbitMQ server
+rabbitmqctl list_channels
+rabbitmqctl list_queues
+rabbitmqctl list_bindings
+rabbitmqctl purge_queue <queue-name> -   remove all messages from a specific queue
+rabbitmqctl stop  - To gracefully shut down the RabbitMQ server
+rabbitmqctl reset - reset the RabbitMQ server
+rabbitmq-plugins enable <plugin-name>   -To enable a specific plugin in the RabbitMQ server
+rabbitmq-plugins disable <plugin-name> - disable a specific plugin in the RabbitMQ server
+rabbitmq-plugins list - list plugins
+----------
+systemctl
+---------
+sudo systemctl start rabbitmq-server  - Start the RabbitMQ Service
+sudo systemctl stop rabbitmq-server  - Stop the RabbitMQ Service
+sudo systemctl restart rabbitmq-server  - restart the RabbitMQ Service
+sudo systemctl status rabbitmq-server
+sudo systemctl enable rabbitmq-server
+sudo systemctl disable rabbitmq-server
+sudo systemctl reload rabbitmq-server
+----------
+cluster
+-----------
+
+rabbitmqctl join_cluster <clustering-option> <cluster-node> - Joining a Cluster
+rabbitmqctl cluster_status -  Cluster status
+rabbitmqctl forget_cluster_node <node-name>  - Removing a Node from a Cluster
+rabbitmqctl stop_app - Stopping and Restarting a Node
+rabbitmqctl start_app - To start the node again,
+
+
+
